@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+   
+}
+
+#header{
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header{
+    margin-top:10px;
+}
+
+.img-header{
+    width: 85px;
+    height: 85px;
+}
+
+#container{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.txt-agendamento{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+    height: 200px;
+}
+
+.tabela-horario{
+    background-color: rgb(27, 26, 26);
+    width: 350px;
+    height: 370px;
+    position:relative;
+    bottom: 100px;
+    border-radius: 7px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    
+    text-align: center;
+    color: white;
+}
+
+.tabela-nome{
+    border-radius: 5px 0px 0px 0px;
+}
+
+.tabela-hora{
+    border-radius: 0px 5px 0px 0px;
+}
+
+.tabela-telefone, .tabela-hora{
+    border-left: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4a209;
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.5);
+}
