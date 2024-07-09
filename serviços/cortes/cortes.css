@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+#header {
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-header {
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+}
+
+.titulo-page1{
+    color: white;
+    font-size:15px;
+    margin-top: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.opcoes-page1 {
+display: flex;
+justify-content: flex-start;
+flex-wrap: wrap;
+width: 340px;  
+
+}
+
+.list{
+    color:white;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+
+
+.opcao1{
+    width: 120px;
+    height: 140px;
+    margin: 15px;
+    background-color: #e46c0a;
+    text-align:center;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    bottom: 30px;
+}
+
+.img-menu{
+   width: 130px;
+   position: relative;
+   bottom: 50px;
+}
+
+.card-img {
+    width: 100%;
+    height: 90px; /* Reduziu a altura da imagem */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 8px; /* Reduziu o padding */
+}
+
+.card-title {
+    font-size: 0.8em; /* Ajustou o tamanho da fonte */
+    margin: 0 0 2px;
+}
+
+.card-description {
+    font-size: 0.8em; /* Ajustou o tamanho da fonte */
+    color: #666;
+    margin: 0 0 5px;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 6px 12px; /* Ajustou o padding */
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em; /* Ajustou o tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.2s;
+   
+}
+
+.card-button:hover {
+    background-color: #b35700;
+}
+
+.top-card {
+   /* margin-bottom: 2px;  Espaçamento entre os cards de cima */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    
+}
+
+.bottom-card {
+    margin-top: -350px; /* Espaçamento entre os cards de baixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    
+}
