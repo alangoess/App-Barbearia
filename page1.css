@@ -135,6 +135,9 @@ width: 340px;
     cursor: pointer;
 }
 
+.img-header{
+    cursor: pointer;
+}
 .img-menu{
     width: 130px;
 }

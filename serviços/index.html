@@ -46,24 +46,27 @@
 
   
 
-    <div id="container">
-        <div class="titulo-agendamento">
-            <h1 class="txt-agendamento">Agendamentos</h1>
-        </div> 
+    <div class="container">
 
-        <div class="tabela-horario" id="tabela-horário">
-            <table id="agendamentos-tabela" class="agendamentos-tabela">
-                <thead>
-                    <tr>
-                        <th class="tabela-nome">Nome</th>
-                        <th class="tabela-telefone">Telefone</th>
-                        <th class="tabela-hora">Hora</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div class="titulo-page1">
+            <img src="../src/02.jpeg" alt="" class="img-menu">
+        </div>
+       <div class="opcoes-page1">
+
+        <button class="opcao1" onclick="redirectTo('../serviços/cortes/cortes.html')">
+            <img src="../src/maquina.png" alt="">
+            <p class="txt-menu">Cortes</p>
+        </button>
+
+        <button class="opcao1">
+            <img src="../src/barba.png" alt="" onclick="redirectTo('../serviços/barba-sobrancelha/barba-sobrancelha.html')">
+            <p class="txt-menu">Barba & Sobrancelhas</p>
+        </button>
+
+       
+
         </div>
     </div>
-<script src="./script.js"></script>
+<script src="./servicos.js"></script>
 </body>
 </html>

@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neguinho du Corte</title>
     <link rel="stylesheet" href="servicos.css">
+    
 </head>
 <body>
     <div id="header">
         <header class="main-header">
-           <img src="../src/Cria.png" class="img-header" alt="logo">
+           <img src="../src/Cria.png" class="img-header" alt="logo" onclick="redirectTo('.././page1.html')">
         </header>
     </div>
+
+    <div class="btn-abrir-menu" id="btn-menu">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div class="menu-mobile" id="menu-mobile">
+        <div class="btn-fechar">
+           <i class="bi bi-x-lg"></i>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../page1.html">Inicio</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Sobre o website</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="overlay-menu" id="overlay-menu"></div>
+
+  
+
 
     <div class="container">
 
@@ -36,6 +62,7 @@
     </div>
 
  
-<script src="servicos.js"></script>
+<script src="./servicos.js"></script>
+<script src="../page1.js"></script>
 </body>
 </html>
