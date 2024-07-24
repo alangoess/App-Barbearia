@@ -288,3 +288,7 @@ width: 340px;
     background-color:  #e46c0a;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.img-header{
+    cursor: pointer;
+}

@@ -127,3 +127,7 @@ width: 340px;
     gap: 10px;
     
 }
+
+.img-header{
+    cursor: pointer;
+}

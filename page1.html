@@ -16,11 +16,12 @@
 <body>
     <div id="header">
         <header class="main-header">
-           <img src="./src/Cria.png" class="img-header" alt="logo" onclick="redirectTo('./page1.html')">
+           <img src="./src/Cria.png" class="img-header" id="img-header" alt="logo">
         </header>
         
     </div>
 
+  <!---MENU-->
     <div class="btn-abrir-menu" id="btn-menu">
         <i class="bi bi-list"></i>
     </div>
@@ -32,7 +33,7 @@
 
         <nav>
             <ul>
-                <li><a href="./page1.html">Inicio</a></li>
+                <li><a href="#">Inicio</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Sobre o website</a></li>
@@ -42,6 +43,7 @@
     </div>
 
     <div class="overlay-menu" id="overlay-menu"></div>
+    <!---MENU-->
 
   
 
@@ -68,7 +70,7 @@
         </button>
 
         <button class="opcao1">
-            <img src="./src/maquina.png" alt="" onclick="redirectTo('./agendar/agendar.html')">
+            <img src="./src/maquina.png"  onclick="redirectTo('./serviços/agendar/agendar.html')">
             <p class="txt-menu">Agende o seu corte</p>
         </button>
 
@@ -78,6 +80,47 @@
     </div>
 
  
+    <div class="page-contato" id="page-contato">
+
+        <div class="title-contato">
+            <h1 class="txt-contato">Contato</h1>
+        </div>
+
+        <div class="contato">
+            <div class="info-contato">
+               <div class="facebook">
+                <img src="./src/facebook.png" alt=""  class="img-facebook"> <h3 class="txt-instagram">@seufacebook</p>
+               </div>
+
+               <div class="instagram">
+                <img src="./src/insta.png" alt="" class="img-instagram"> <h3 class="txt-instagram">@seuinstagram</p>
+               </div>
+
+               <div class="whatsapp">
+                <img src="./src/whatsapp.png" alt=""  class="img-whatsapp"> <h3 class="txt-instagram">@seuwhatsapp</p>
+               </div>
+            </div>
+    
+            <div class="img-contato">
+                <img src="./src/01.jpeg" class="barber-img" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="sobre">
+        <div class="title-sobre">
+            <h1>Sobre</h1>
+        </div>
+
+        <div class="txt-sobre">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo cum at corrupti blanditiis, culpa incidunt repellat itaque officiis sit enim libero id, quam quis inventore neque impedit sequi sed. Error.</p>
+        </div>
+    </div>
+
+    <div class="sobre-website">
+        <h1 class="title-sobre-website">Sobre Website</h1>
+        <p class="txt-sobre-website">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti provident similique natus nihil at alias veritatis omnis rem nam commodi repellat, ratione quas earum. Dolores dignissimos est repellendus quae!</p>
+    </div>
 <script src="page1.js"></script>
 </body>
 </html>

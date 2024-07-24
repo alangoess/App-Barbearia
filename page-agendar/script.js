@@ -1,12 +1,12 @@
-const page1 = document.getElementById('img-header')
+function redirectTo(url) {
+    window.location.href = url;
+}
 
-page1.addEventListener('click', function(){
-    location.href = '../page1.html'
-})
-
+/*Menu*/
 let btnMenu = document.getElementById('btn-menu');
 let menu = document.getElementById('menu-mobile');
 let overlay = document.getElementById('overlay-menu');
+let imgHeader = document.getElementById('img-header');
 
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
@@ -19,6 +19,8 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
+/*Menu*/
 
-
-
+imgHeader.addEventListener('click', ()=>{
+    location.href = '../page1.html'
+})
