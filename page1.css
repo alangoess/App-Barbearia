@@ -27,6 +27,7 @@ body {
     height: 300px;
 }
 
+/*Menu*/
 .btn-abrir-menu i{
     color: #e46c0a;
     font-size: 35px;
@@ -109,6 +110,7 @@ body {
     z-index: 88888;
     display: none;
 }
+/*Menu*/
 
 .titulo-page1{
     color: white;
@@ -135,11 +137,12 @@ width: 340px;
     cursor: pointer;
 }
 
-.img-header{
-    cursor: pointer;
-}
 .img-menu{
     width: 130px;
+}
+
+.img-header{
+    cursor: pointer;
 }
 
 .card-img {
@@ -200,4 +203,105 @@ width: 340px;
     flex-wrap: wrap; 
     gap: 10px;
     
+}
+
+.page-contato{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    margin-top: 170px;
+}
+
+.title-contato{
+    margin-top: 57px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+.contato{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-contato{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+}
+
+.facebook, .instagram, .whatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.txt-instagram{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin: 15px;
+    color: white;
+}
+
+.barber-img{
+    width: 150px;
+    height: 200px;
+    border-radius: 350px;
+}
+
+.sobre{
+    color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.title-sobre{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.txt-sobre{
+  text-align: start;
+  margin-bottom: 200px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sobre-website{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 200px;
+}
+
+.txt-sobre-website{
+    color: white;
+    text-align: start;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-sobre-website{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 22px;
 }
