@@ -23,3 +23,24 @@ overlay.addEventListener('click', ()=>{
 imgHeader.addEventListener('click', ()=>{
     location.href = '../../page1.html'
 })
+
+
+
+
+
+function Confirmar(){
+    let nome = document.getElementById('nome').value;
+    let telefone = document.getElementById('telefone').value;
+    let hora = document.getElementById('hora').value;
+    
+    if(nome === "" || telefone === "" || hora === ""){
+        alert('Preencha todos os campos em branco')
+
+    }else{
+        
+        location.href = '../../page-agendar/index.html'
+        sessionStorage.setItem('nome', nome)
+        sessionStorage.setItem('telefone', telefone)
+        sessionStorage.setItem('hora', hora)
+    }
+}

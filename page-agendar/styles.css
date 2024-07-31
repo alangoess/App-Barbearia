@@ -20,6 +20,10 @@ body{
     height: 85px;
 }
 
+.dados_clientes{
+    color: white;
+}
+
 #container{
     background-color: rgb(0, 0, 0);
     display: flex;

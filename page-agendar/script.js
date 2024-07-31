@@ -24,3 +24,16 @@ overlay.addEventListener('click', ()=>{
 imgHeader.addEventListener('click', ()=>{
     location.href = '../page1.html'
 })
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    const nome = sessionStorage.getItem('nome')
+    const telefone = sessionStorage.getItem('telefone')
+    const hora = sessionStorage.getItem('hora')
+    
+
+    if(nome && telefone && hora){
+        const MostrarDados = document.getElementById('dados_clientes')
+        MostrarDados.innerHTML += `${nome} ${telefone} ${hora}` 
+    }
+})
