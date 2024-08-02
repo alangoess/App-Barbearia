@@ -33,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
     if(nome && telefone && hora){
-        const MostrarDados = document.getElementById('dados_clientes')
-        MostrarDados.innerHTML += `${nome} ${telefone} ${hora}` 
+        const MostrarDados = document.getElementById('col-nome1')
+        const MostrarDados2 = document.getElementById('col-nome2')
+        const MostrarDados3 = document.getElementById('col-nome3')
+
+        MostrarDados.innerHTML += `${nome}`
+        MostrarDados2.innerHTML += `${telefone}`
+        MostrarDados3.innerHTML += `${hora}` 
     }
 })

@@ -126,6 +126,40 @@ body{
     height: 200px;
 }
 
+.col-nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.col-nomes1{
+    margin: 35px;
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+    width: 300px;
+
+}
+
+.col-nomes2{
+    margin: 25px;
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+.col-nomes3{
+    margin: 30px;
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+}
 .tabela-horario{
     background-color: rgb(27, 26, 26);
     width: 350px;
