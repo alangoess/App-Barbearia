@@ -29,6 +29,21 @@ app.post('/submit', (req, res) => {
     });
 });
 
+app.get('/dados', (req, res) => {
+    db.all('SELECT nome, telefone, hora FROM users', (err, rows) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        res.json(rows);
+    });
+});
+
+// Rota para servir a página agendar
+app.get('./page-agendar/script.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', './page-agendar/index.html'));
+});
+
+
 // Iniciar o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
