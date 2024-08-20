@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: black;
    
 }
 
@@ -130,40 +131,48 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 350px;
+    margin: 10px;
+    margin-top: 30px;
+    margin-left: -1px;
 }
 
 
 
 .col-nomes1{
-    margin: 35px;
+
     position: relative;
     bottom: 30px;
     color: white;
     font-size: 20px;
-    width: 300px;
+    width: 120px;
+    text-align: center;
 
 }
 
 .col-nomes2{
-    margin: 25px;
+    
     position: relative;
     bottom: 30px;
     color: white;
     font-size: 20px;
+    width: 160px;
+    text-align: center;
 }
 
 .col-nomes3{
-    margin: 30px;
+    
     position: relative;
     bottom: 30px;
     color: white;
     font-size: 20px;
+    width: 100px;
+    text-align: center;
 }
 .tabela-horario{
     background-color: rgb(27, 26, 26);
     width: 350px;
-    height: 370px;
+    height: 100%, 380px;
     position:relative;
     bottom: 100px;
     border-radius: 7px;
@@ -196,7 +205,7 @@ th, td {
 }
 
 th {
-    background-color: #f4a209;
+    background-color:#e46c0a;
 }
 
 td {
@@ -205,4 +214,19 @@ td {
 
 .img-header{
     cursor: pointer;
+}
+
+.btn-agendar{
+    color: #e46c0a;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -90px;
+    font-size: 45px;
+    position: fixed;
+}
+
+#icone{
+    margin-right: 20px;
+    margin-top: 380px;
 }

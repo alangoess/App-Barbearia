@@ -7,10 +7,16 @@ let btnMenu = document.getElementById('btn-menu');
 let menu = document.getElementById('menu-mobile');
 let overlay = document.getElementById('overlay-menu');
 let imgHeader = document.getElementById('img-header');
+let BtnAgendar = document.getElementById('icone')
 
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
 })
+
+BtnAgendar.addEventListener('click', ()=>{
+    location.href = '../serviços/agendar/agendar.html'
+})
+
 
 menu.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
