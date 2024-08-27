@@ -52,6 +52,7 @@ document.getElementById('botao_confirmar').addEventListener('click', function(ev
     const nome = document.getElementById('nome').value;
     const telefone = document.getElementById('telefone').value;
     const hora = document.getElementById('hora').value;
+    const infoAgendamento = document.getElementById('info-agendamento')
 
     if (nome === "" || telefone === "" || hora === "") {
         alert('Preencha todos os campos em branco');
@@ -68,7 +69,8 @@ document.getElementById('botao_confirmar').addEventListener('click', function(ev
         .then(data => {
             if (data.error) {
                 // Verifica se há um erro (por exemplo, nome duplicado)
-                alert(data.error);
+                infoAgendamento.innerHTML = data.error
+                infoAgendamento.style.color = 'yellow'
             } else {
                 // Armazena os dados no sessionStorage e redireciona
                 sessionStorage.setItem('nome', nome);

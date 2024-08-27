@@ -24,7 +24,7 @@ app.post('/submit', (req, res) => {
         if(err){
             return res.status(500).json({error: err.message});
         } if(row){
-          return res.status(400).json({error: 'Nome já existe na tabela'});
+          return res.status(400).json({error: 'ERRO! NOME JÁ EXISTE NA TABELA'});
 
         }
 
