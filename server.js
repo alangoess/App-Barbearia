@@ -19,6 +19,14 @@ db.serialize(() => {
 // Rota para receber os dados do formulário
 app.post('/submit', (req, res) => {
     const { nome, telefone, hora } = req.body;
+    
+    db.get('SELECT nome from users WHERE nome = ?', [nome], (err, row) => {
+        if(err){
+            return res.status(500).json({error: err.message});
+        } if(row){
+          return res.status(400).json({error: 'Nome já existe na tabela'});
+
+        }
 
     // Inserir dados na tabela
     db.run(`INSERT INTO users(nome, telefone, hora) VALUES(?, ?, ?)`, [nome, telefone, hora], function(err) {
@@ -27,6 +35,7 @@ app.post('/submit', (req, res) => {
         }
         res.json({ message: "Dados inseridos com sucesso!" });
     });
+  });
 });
 
 app.get('/dados', (req, res) => {
