@@ -8,6 +8,18 @@ let menu = document.getElementById('menu-mobile');
 let overlay = document.getElementById('overlay-menu');
 let imgHeader = document.getElementById('img-header');
 let BtnAgendar = document.getElementById('icone')
+let button = document.querySelector('#open-dialog')
+let modal = document.querySelector('dialog')
+let buttonClose = document.querySelector("#remover")
+
+
+button.onclick = function(){
+    modal.showModal()
+}
+
+buttonClose.onclick = function(){
+modal.close()
+}
 
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
@@ -51,3 +63,4 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Erro ao buscar dados:', error);
         });
 });
+
