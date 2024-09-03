@@ -47,6 +47,22 @@ app.get('/dados', (req, res) => {
     });
 });
 
+
+app.delete('/delete', (req, res) => {
+   const {nome} = req.body;
+
+   db.run('DELETE FROM users WHERE nome = ?', [nome], function(err){
+    if(err){
+        return res.status(500).json({error: err.message});
+    }
+    if(this.changes === 0){
+        return res.status(400).json({message: "Usuário não encontrado!"});
+    }
+    res.json({message: "Usuário deletado com sucesso!"});
+
+   });
+});
+
 // Rota para servir a página agendar
 app.get('./page-agendar/script.js', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', './page-agendar/index.html'));

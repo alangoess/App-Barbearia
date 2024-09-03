@@ -95,11 +95,13 @@
             <i id="open-dialog" class="bi bi-trash"></i>
             <dialog class="modal-card">
                 <h2 class="modal-title">Digite o nome que deseja remover</h2>
+                <form id="delete-user">
                 <div class="modal-info">
                     <input type="text" id="remover-cliente" class="remover-cliente">
-                    <button onclick="remover()" class="btn-remover">Remover</button>
-                    
+                    <button onclick="window.location.reload()" type="submit" class="btn-remover">Remover</button>
+                    <div id="responseMessage"></div>  
                 </div>
+                </form>
                 <button id="remover" class="remover">X</button>
             </dialog>
 

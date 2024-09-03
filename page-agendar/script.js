@@ -64,3 +64,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
+document.getElementById('delete-user').addEventListener('submit', function(event){
+   event.preventDefault();
+
+   const nome = document.getElementById('remover-cliente').value;
+
+   fetch('/delete', {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({nome: nome})
+   })
+   .then(response => response.json())
+   .then(data => {
+    const responseMessage = document.getElementById('responseMessage');
+    if(data.error){
+        responseMessage.textContent = `Erro: ${data.error}`;
+    }else{
+        responseMessage.textContent = data.message;
+
+        const removeNome = document.querySelectorAll(`[id^=nome-]`);
+        const removeTelefone = document.querySelectorAll(`[id^=telefone-]`);
+        const removeHora = document.querySelectorAll(`[id^hora-]`);
+
+        removeNome.forEach((elemento, index) => {
+            if(elemento.textContent === nome){
+               elemento.remove();
+               removeTelefone[index].remove();
+               removeHora[index].remove();
+            }
+
+        });
+    }
+
+   })
+   .catch(error => console.error('Error:', error));
+});
+
