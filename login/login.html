@@ -51,62 +51,30 @@
 
     <div id="container">
         <div class="titulo-agendamento">
-            <h1 class="txt-agendamento">Agendamentos</h1>
+           
         </div>
 
         <div class="tabela-horario" id="tabela-horario">
-            <div class="tabela-info">
-                <table id="agendamentos-tabela" class="agendamentos-tabela">
-                    <thead>
-                        <tr>
-                            <th class="tabela-nome">Nome</th>
-                            <th class="tabela-telefone">Telefone</th>
-                            <th class="tabela-hora" id="tabela-hora">Hora</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-
-            <div class="col-nome">
-                <div class="col-nomes1">
-                    <p class="col-nome1" id="col-nome1"></p>
+            <div class="login-senha">
+                 
+                <div class="login">
+                    <h1 class="user-login">Login</h2>
+                    <input type="text" class="inp-login" id="inp-login" placeholder="Login">
+                    <input type="password" class="inp-senha" id="inp-senha" placeholder="Senha">
                 </div>
 
-                <div class="col-nomes2">
-                    <p class="col-nome2" id="col-nome2"></p>
+                <div class="btn">
+                    <button class="btn-entrar" id="btn-entrar">Entrar</button>
                 </div>
-
-                <div class="col-nomes3">
-                    <p class="col-nome3" id="col-nome3"></p>
+                
+               
+                <div class="esqueceuSenha">
+                    <a href="" class="txt-esqueceusenha">Esqueceu a senha?</a>
                 </div>
             </div>
 
-            <div class="dados">
-                <p id="dados_clientes" class="dados_clientes"></p>
-            </div>
         </div>
-
-        <div class="btn-agendar" id="btn-agendar">
-            <i class="bi bi-plus-square-fill" id="icone"></i>
-        </div>
-
-        <div class="btn-dialog" class="btn-dialog">
-            <i id="open-dialog" class="bi bi-trash"></i>
-            <dialog class="modal-card">
-                <h2 class="modal-title">Digite o nome que deseja remover</h2>
-                <form id="delete-user">
-                <div class="modal-info">
-                    <input type="text" id="remover-cliente" class="remover-cliente">
-                    <button onclick="window.location.reload()" type="submit" class="btn-remover">Remover</button>
-                    <div id="responseMessage"></div>  
-                </div>
-                </form>
-                <button id="remover" class="remover">X</button>
-            </dialog>
-
-        </div>
-    </div>
+  </div>
 
 
     <script src="script.js"></script>
