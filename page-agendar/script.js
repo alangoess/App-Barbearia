@@ -6,6 +6,22 @@ function redirectTo(url) {
 let btnMenu = document.getElementById('btn-menu');
 let menu = document.getElementById('menu-mobile');
 let overlay = document.getElementById('overlay-menu');
+
+btnMenu.addEventListener('click', ()=>{
+    menu.classList.add('abrir-menu')
+})
+
+menu.addEventListener('click', ()=>{
+    menu.classList.remove('abrir-menu')
+})
+
+overlay.addEventListener('click', ()=>{
+    menu.classList.remove('abrir-menu')
+})
+/*Menu*/
+
+
+
 let imgHeader = document.getElementById('img-header');
 let BtnAgendar = document.getElementById('icone')
 let button = document.querySelector('#open-dialog')
@@ -13,6 +29,18 @@ let modal = document.querySelector('dialog')
 let buttonClose = document.querySelector("#remover")
 let greenStatus = document.getElementById('tabela-hora')
 const emoji = document.createElement('span');
+
+
+let permissao = localStorage.getItem('permitir');
+console.log(permissao)
+if(permissao === 'false'){
+  document.getElementById('permissao_remover').style.display = 'none';
+  console.log('ENTROU')
+} else {
+    console.log('NÃO ENTROU')
+}
+
+
 
 
 button.onclick = function(){
@@ -23,23 +51,10 @@ buttonClose.onclick = function(){
 modal.close()
 }
 
-btnMenu.addEventListener('click', ()=>{
-    menu.classList.add('abrir-menu')
-})
 
 BtnAgendar.addEventListener('click', ()=>{
     location.href = '../serviços/agendar/agendar.html'
 })
-
-
-menu.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
-
-overlay.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
-/*Menu*/
 
 imgHeader.addEventListener('click', ()=>{
     location.href = '../page1.html'

@@ -21,4 +21,13 @@ overlay.addEventListener('click', ()=>{
 })
 
 
+function Sair(){
+    localStorage.setItem('permitir', false);
+    // localStorage.clear()    #limpar todo cache do localStorage se necessário
+    location.href = '../login/login.html'
+    
+ }
+  
+
+
 
