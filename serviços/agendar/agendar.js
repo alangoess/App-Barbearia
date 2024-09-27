@@ -25,27 +25,6 @@ imgHeader.addEventListener('click', ()=>{
 })
 
 
-
-
-
-// function Confirmar(){
-//     let nome = document.getElementById('nome').value;
-//     let telefone = document.getElementById('telefone').value;
-//     let hora = document.getElementById('hora').value;
-    
-//     if(nome === "" || telefone === "" || hora === ""){
-//         alert('Preencha todos os campos em branco')
-
-//     }else{
-        
-//         location.href = '../../page-agendar/index.html'
-//         sessionStorage.setItem('nome', nome)
-//         sessionStorage.setItem('telefone', telefone)
-//         sessionStorage.setItem('hora', hora)
-//     }
-// }
-
-
 document.getElementById('botao_confirmar').addEventListener('click', function(event) {
     event.preventDefault(); // Previne o envio padrão do formulário
     
