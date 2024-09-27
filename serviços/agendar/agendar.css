@@ -235,11 +235,12 @@ width: 340px;
     font-style: italic;
 }
 
-.agendar-telefone{
+
+.agendar-telefon{
   margin: 10px;    
 }
 
-.tel, .hora, .inp-nome{
+.tel, .inp-nome, .data{
   width: 330px;
   height: 30px;
   font-size: 20px;

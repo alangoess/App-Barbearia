@@ -128,7 +128,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     text-align: center;
-    height: 200px;
+    height: 180px;
+    position: relative;
+    top: 20px;
 }
 
 .col-nome {
@@ -179,7 +181,7 @@ body {
     width: 350px;
     height: 100%, 380px;
     position: relative;
-    bottom: 100px;
+    bottom: 150px;
     border-radius: 7px;
 }
 
@@ -300,4 +302,24 @@ td {
 #icone {
     margin-right: 20px;
     margin-top: 380px;
+}
+
+.mostrarDia, .mostrarData{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+    background-color: #e46c0a;
+    border: rgba(255, 255, 255, 0.589) solid .5px;
+    width: 170px;
+}
+
+.dia-data{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    top: 6px;
 }

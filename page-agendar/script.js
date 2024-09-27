@@ -29,6 +29,22 @@ let modal = document.querySelector('dialog')
 let buttonClose = document.querySelector("#remover")
 let greenStatus = document.getElementById('tabela-hora')
 const emoji = document.createElement('span');
+let mostrarDia = document.getElementById('mostrarDia')
+let mostrarData = document.getElementById('mostrarData')
+
+dayName = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
+const data = new Date
+let hora = data.getHours()
+
+if(hora >=21){
+    mostrarDia.innerHTML = `${dayName[data.getDay() + 1]}`
+    mostrarData.innerHTML = `${data.getDate() + 1}/0${data.getMonth() + 1}/${data.getFullYear()}`
+}else{
+     mostrarDia.innerHTML = `${dayName[data.getDay()]}`
+     mostrarData.innerHTML = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
+
+    mostrarData.innerHTML = dataFormatada
+}
 
 
 let permissao = localStorage.getItem('permitir');
