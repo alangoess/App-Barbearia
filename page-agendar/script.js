@@ -42,8 +42,6 @@ if(hora >=21){
 }else{
      mostrarDia.innerHTML = `${dayName[data.getDay()]}`
      mostrarData.innerHTML = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
-
-    mostrarData.innerHTML = dataFormatada
 }
 
 

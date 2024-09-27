@@ -221,13 +221,15 @@ width: 340px;
     border-radius: 10px;
     position: relative;
     top: 80px;
+    
 }
 
-.input-nome{
+.input-nome, .hora-agendar{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
 }
 
 .nome{
@@ -237,10 +239,10 @@ width: 340px;
 
 
 .agendar-telefon{
-  margin: 10px;    
+  margin: 40px;    
 }
 
-.tel, .inp-nome, .data{
+.tel, .inp-nome, .hora-agendar{
   width: 330px;
   height: 30px;
   font-size: 20px;
