@@ -38,7 +38,7 @@ let hora = data.getHours()
 
 if(hora >=21){
     mostrarDia.innerHTML = `${dayName[data.getDay() + 1]}`
-    mostrarData.innerHTML = `${data.getDate() + 1}/0${data.getMonth() + 1}/${data.getFullYear()}`
+    mostrarData.innerHTML = `${data.getDate() + 1}/${data.getMonth() + 1}/${data.getFullYear()}`
 }else{
      mostrarDia.innerHTML = `${dayName[data.getDay()]}`
      mostrarData.innerHTML = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`

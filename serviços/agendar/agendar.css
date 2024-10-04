@@ -1,12 +1,12 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-image: url(../../src/background1.png);
 }
 
 
 #header {
-    background-color: black;
+    background-image: url(../../src/background1.png);
     height: 100px;
     display: flex;
     justify-content: center;
@@ -211,7 +211,7 @@ width: 340px;
 }
 
 .agendar{
-    background-color: rgb(14, 13, 13);
+    background-color: rgba(14, 13, 13, 0.178);
     display: flex;
     justify-content: center;
     align-items: center;

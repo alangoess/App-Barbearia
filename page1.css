@@ -1,13 +1,15 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-image:url(./src/background1.png);
+    background-position: center; 
+    background-size: cover;
 }
 
 
 #header {
-    background-color: black;
-    height: 100px;
+    background-image:url(./src/background1.png);
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,6 +141,7 @@ width: 340px;
 
 .img-menu{
     width: 130px;
+    margin-top: 40px;
 }
 
 .img-header{

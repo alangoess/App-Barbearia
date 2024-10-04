@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    background-color: black;
+   background-image: url(../../src/background1.png);
 }
 
 #header {
-    background-color: black;
+    background-image: url(../../src/background1.png);
     height: 100px;
     display: flex;
     justify-content: center;
