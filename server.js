@@ -6,6 +6,7 @@ const path = require('path');
 const app = express();
 const db = new sqlite3.Database('./serviços/agendar/database.db'); // Salvar os dados no arquivo 'database.db'
 
+
 app.use(bodyParser.json());
 
 // Servir arquivos estáticos da pasta atual
@@ -13,12 +14,12 @@ app.use(express.static(path.join(__dirname)));
 
 // Criar a tabela, se ainda não existir
 db.serialize(() => {
-    db.run("CREATE TABLE IF NOT EXISTS users (nome TEXT, telefone INTEGER, hora INTEGER)");
+    db.run("CREATE TABLE IF NOT EXISTS users (nome TEXT, telefone INTEGER, hora INTEGER, data TEXT)");
 });
 
 // Rota para receber os dados do formulário
 app.post('/submit', (req, res) => {
-    const { nome, telefone, hora } = req.body;
+    const { nome, telefone, hora, data} = req.body;
     
     db.get('SELECT nome from users WHERE nome = ?', [nome], (err, row) => {
         if(err){
@@ -29,7 +30,7 @@ app.post('/submit', (req, res) => {
         }
 
     // Inserir dados na tabela
-    db.run(`INSERT INTO users(nome, telefone, hora) VALUES(?, ?, ?)`, [nome, telefone, hora], function(err) {
+    db.run(`INSERT INTO users(nome, telefone, hora, data) VALUES(?, ?, ?, ?)`, [nome, telefone, hora, data], function(err) {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
@@ -39,7 +40,7 @@ app.post('/submit', (req, res) => {
 });
 
 app.get('/dados', (req, res) => {
-    db.all('SELECT nome, telefone, hora FROM users', (err, rows) => {
+    db.all('SELECT nome, telefone, hora, data FROM users', (err, rows) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
@@ -66,6 +67,10 @@ app.delete('/delete', (req, res) => {
 // Rota para servir a página agendar
 app.get('./page-agendar/script.js', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', './page-agendar/index.html'));
+});
+
+app.get('./historico/historico.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', './historico/historico.html'));
 });
 
 

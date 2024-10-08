@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    background-image: url(../src/background1.png);
+
+}
+
+#header {
+    background-image: url(../src/background1.png);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header {
+    margin-top: 10px;
+}
+
+.img-header {
+    width: 85px;
+    height: 85px;
+}
+
+.dados_clientes {
+    color: white;
+}
+
+#container {
+    background-image: url(../src/background1.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/*Menu*/
+.btn-abrir-menu i {
+    color: #e46c0a;
+    font-size: 35px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 5%;
+
+
+}
+
+.menu-mobile {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    overflow: hidden;
+    z-index: 999999;
+    transition: .2s;
+
+
+
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu~.overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #e46c0a;
+    font-size: 30px;
+
+
+
+}
+
+
+.menu-mobile nav ul {
+    text-align: right;
+    list-style-type: none;
+
+
+}
+
+.menu-mobile nav li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+    display: block;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+
+
+
+}
+
+.menu-mobile nav li a:hover {
+    background-color: #e46c0a;
+    color: #000;
+
+
+
+}
+
+.overlay-menu {
+    background-color: #00000088;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/*Menu*/
+
+.txt-agendamento {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+    height: 180px;
+    position: relative;
+    top: 20px;
+}
+
+.col-nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin: 10px;
+    margin-top: 30px;
+    margin-left: -1px;
+}
+
+
+
+.col-nomes1 {
+
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+    width: 120px;
+    text-align: center;
+
+}
+
+.col-nomes2 {
+
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+    width: 160px;
+    text-align: center;
+}
+
+.col-nomes3 {
+
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.col-nomes4 {
+
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.tabela-horario {
+    background-color: rgb(27, 26, 26);
+    width: 350px;
+    height: 100%, 380px;
+    position: relative;
+    bottom: 150px;
+    border-radius: 7px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+    color: white;
+}
+
+.tabela-nome {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.tabela-hora {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.tabela-telefone,
+.tabela-hora {
+    border-left: 1px solid #ddd;
+}
+
+th {
+    background-color: #e46c0a;
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-header {
+    cursor: pointer;
+}
+
+.btn-agendar {
+    color: #e46c0a;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -90px;
+    font-size: 45px;
+    position: fixed;
+}
+
+.btn-dialog {
+    color: #e46c0a;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 45px;
+    margin-top: 402px;
+    position: fixed;
+}
+
+.modal-card {
+    height: 300px;
+    color: white;
+    background-color: rgba(29, 29, 29, 0.904);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.modal-title{
+    text-align: center;
+}
+.modal-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.remover-cliente {
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+
+}
+
+.btn-remover {
+    width: 200px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    background-color: #e46c0a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.remover{
+    color: rgb(255, 255, 255);
+    background-color: #e46c0a;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+#open-dialog {
+    margin-right: 20px;
+    color: black;
+    background-color: #e46c0a;
+    border-radius: 4px;
+}
+
+#icone {
+    margin-right: 20px;
+    margin-top: 380px;
+}
+
+.mostrarDia, .mostrarData{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+    background-color: #242423af;
+    width: 170px;
+}
+
+.dia-data{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    top: 6px;
+}
