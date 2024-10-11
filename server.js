@@ -49,6 +49,7 @@ app.get('/dados', (req, res) => {
 });
 
 
+
 app.delete('/delete', (req, res) => {
    const {nome} = req.body;
 

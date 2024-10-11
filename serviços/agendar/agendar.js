@@ -67,3 +67,4 @@ document.getElementById('botao_confirmar').addEventListener('click', function(ev
         });
     }
 });
+

@@ -1,4 +1,4 @@
-function redirectTo(url) {getI
+function redirectTo(url) {
     window.location.href = url;
 }
 
@@ -29,8 +29,7 @@ let modal = document.querySelector('dialog')
 let buttonClose = document.querySelector("#remover")
 let greenStatus = document.getElementById('tabela-hora')
 const emoji = document.createElement('span');
-let mostrarDia = document.getElementById('mostrarDia')
-let mostrarData = document.getElementById('mostrarData')
+
 
 
 let permissao = localStorage.getItem('permitir');
@@ -43,24 +42,10 @@ if(permissao === 'false'){
 }
 
 
-
-
-button.onclick = function(){
-    modal.showModal()
-}
-
-buttonClose.onclick = function(){
-modal.close()
-}
-
-
-BtnAgendar.addEventListener('click', ()=>{
-    location.href = '../serviços/agendar/agendar.html'
-})
-
 imgHeader.addEventListener('click', ()=>{
     location.href = '../page1.html'
 })
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Função para buscar dados do servidor
@@ -71,19 +56,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const MostrarDados2 = document.getElementById('col-nome2');
             const MostrarDados3 = document.getElementById('col-nome3');
             const MostrarDados4 = document.getElementById('col-nome4');
-
+            
+            
             // Adicionar novos dados
             data.forEach(dado => {
                 MostrarDados1.innerHTML += `<p>${dado.nome}</p>`;
                 MostrarDados2.innerHTML += `<p>${dado.telefone}</p>`;
                 MostrarDados3.innerHTML += `<p>${dado.hora}</p>`;
-                MostrarDados4.innerHTML += `<p>${dado.data1}</p>`;
+                MostrarDados4.innerHTML += `<p>${dado.data} </p>`;
             });
         })
         .catch(error => {
             console.error('Erro ao buscar dados:', error);
         });
 });
-
-
 
