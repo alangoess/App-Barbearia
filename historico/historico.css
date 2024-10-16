@@ -214,9 +214,10 @@ td {
     border-radius: 5px 0px 0px 0px;
 }
 
-.tabela-hora {
+.tabela-hora, .tabela-data {
     border-radius: 0px 5px 0px 0px;
 }
+
 
 .tabela-telefone,
 .tabela-hora {

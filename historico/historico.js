@@ -56,6 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const MostrarDados2 = document.getElementById('col-nome2');
             const MostrarDados3 = document.getElementById('col-nome3');
             const MostrarDados4 = document.getElementById('col-nome4');
+           
+            MostrarDados1.style.fontSize = '15px'
+            MostrarDados2.style.fontSize = '15px'
+            MostrarDados3.style.fontSize = '15px'
+            MostrarDados4.style.fontSize = '15px'
 
             // Adicionar novos dados
             data.forEach(dado => {

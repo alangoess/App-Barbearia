@@ -31,6 +31,9 @@ let greenStatus = document.getElementById('tabela-hora')
 const emoji = document.createElement('span');
 let mostrarDia = document.getElementById('mostrarDia')
 let mostrarData = document.getElementById('mostrarData')
+let tabelaHorario = document.getElementById('tabela-horario')
+let btn1 = document.getElementById('agendamentoDia')
+let btn2 = document.getElementById('agendamentoProx')
 
 dayName = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
 const data = new Date
@@ -41,7 +44,7 @@ if(hora >=21){
     mostrarData.innerHTML = `${data.getDate() + 1}/${data.getMonth() + 1}/${data.getFullYear()}`
 }else{
      mostrarDia.innerHTML = `${dayName[data.getDay()]}`
-     mostrarData.innerHTML = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
+     mostrarData.innerHTML = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
 }
 
 
@@ -73,6 +76,23 @@ BtnAgendar.addEventListener('click', ()=>{
 imgHeader.addEventListener('click', ()=>{
     location.href = '../page1.html'
 })
+
+function agendamentoDia(){
+    if(btn2){
+        tabelaHorario.style.visibility = 'visible'
+        mostrarData.style.visibility = 'visible'
+        mostrarDia.style.visibility = 'visible'
+    } 
+}
+
+function agendamentoProx(){
+    if(btn1){
+        tabelaHorario.style.visibility = 'hidden';
+        mostrarData.style.visibility = 'hidden'
+        mostrarDia.style.visibility = 'hidden'
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Função para buscar dados do servidor
