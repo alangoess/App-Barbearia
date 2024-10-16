@@ -56,8 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const MostrarDados2 = document.getElementById('col-nome2');
             const MostrarDados3 = document.getElementById('col-nome3');
             const MostrarDados4 = document.getElementById('col-nome4');
-            
-            
+
             // Adicionar novos dados
             data.forEach(dado => {
                 MostrarDados1.innerHTML += `<p>${dado.nome}</p>`;

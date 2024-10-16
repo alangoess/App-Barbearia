@@ -34,6 +34,9 @@ document.getElementById('botao_confirmar').addEventListener('click', function(ev
     const infoAgendamento = document.getElementById('info-agendamento');
     const data = document.getElementById('data').value;
 
+    const data_formatada = data.split('-').reverse().join('/');
+   
+
     if (nome === "" || telefone === "" || hora === "" || data === "") {
         alert('Preencha todos os campos em branco');
     } else {
@@ -43,7 +46,7 @@ document.getElementById('botao_confirmar').addEventListener('click', function(ev
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ nome: nome, telefone: telefone, hora: hora, data: data })
+            body: JSON.stringify({ nome: nome, telefone: telefone, hora: hora, data: data_formatada })
         })
         .then(response => response.json())
         .then(data => {
@@ -56,7 +59,7 @@ document.getElementById('botao_confirmar').addEventListener('click', function(ev
                 sessionStorage.setItem('nome', nome);
                 sessionStorage.setItem('telefone', telefone);
                 sessionStorage.setItem('hora', hora);
-                sessionStorage.setItem('data', data);
+                sessionStorage.setItem('data', data_formatada);
                 location.href = '../../page-agendar/index.html';
                 
             }
