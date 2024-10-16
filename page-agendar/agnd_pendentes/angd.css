@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    background-image: url(../src/background1.png);
+    background-image: url(../../src/background1.png);
 
 }
 
 #header {
-    background-image: url(../src/background1.png);
+    background-image: url(../../src/background1.png);
     height: 100px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ body {
     color: white;
     background-color: #ffffff00;
     border: none;
-    border-bottom: #e46c0a solid 1px;
+    
 }
 
 .agendamentoProx{
@@ -36,7 +36,21 @@ body {
     color: white;
     background-color: #ffffff00;
     border: none;
-   
+    border-bottom: #e46c0a solid 1px;
+}
+
+
+
+.agendamentoDia:focus, .agendamentoProx:focus{
+    margin: 3px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: white;
+    background-color: #ffffff00;
+    border: none;
+    border-bottom: #e46c0a solid 1px;
+    
 }
 
 
@@ -54,7 +68,7 @@ body {
 }
 
 #container {
-    background-image: url(../src/background1.png);
+    background-image: url(../../src/background1.png);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,6 +218,16 @@ body {
     text-align: center;
 }
 
+.col-nomes4 {
+
+    position: relative;
+    bottom: 30px;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
 .tabela-horario {
     background-color: rgb(27, 26, 26);
     width: 350px;
@@ -232,9 +256,10 @@ td {
     border-radius: 5px 0px 0px 0px;
 }
 
-.tabela-hora {
+.tabela-hora, .tabela-data {
     border-radius: 0px 5px 0px 0px;
 }
+
 
 .tabela-telefone,
 .tabela-hora {

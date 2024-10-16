@@ -40,14 +40,13 @@ app.post('/submit', (req, res) => {
 });
 
 app.get('/dados', (req, res) => {
-    db.all('SELECT nome, telefone, hora, data FROM users', (err, rows) => {
+    db.all('SELECT nome, telefone, hora, data FROM users ORDER BY data ASC', (err, rows) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
         res.json(rows);
     });
 });
-
 
 
 app.delete('/delete', (req, res) => {

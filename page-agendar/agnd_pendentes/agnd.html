@@ -12,7 +12,7 @@
         rel="stylesheet">
     <!---GOOGLE FONTS-->
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="angd.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -20,10 +20,12 @@
 
     <div id="header">
         <header class="main-header">
-            <img src="../src/Cria.png" class="img-header" id="img-header" alt="">
+            <img src="../../src/Cria.png" class="img-header" id="img-header" alt="">
         </header>
     </div>
 
+
+    
 
     <!---MENU-->
     <div class="btn-abrir-menu" id="btn-menu">
@@ -37,10 +39,10 @@
 
         <nav>
             <ul>
-                <li><a href="../page1.html">Inicio</a></li>
-                <li><a href="../page1.html#page-contato">Contato</a></li>
-                <li><a href="../page1.html#sobre">Sobre</a></li>
-                <li><a href="../page1.html#sobre-site">Sobre o website</a></li>
+                <li><a href="../../page1.html">Inicio</a></li>
+                <li><a href="../../page1.html#page-contato">Contato</a></li>
+                <li><a href="../../page1.html#sobre">Sobre</a></li>
+                <li><a href="../../page1.html#sobre-site">Sobre o website</a></li>
                 <li><a onclick="Sair()">Sair</a></li>
             </ul>
         </nav>
@@ -51,20 +53,16 @@
     <!---MENU-->
 
     <div class="subHeader">
-       <button class="agendamentoDia" id="agendamentoDia" onclick="redirectTo('#')">Agendamento do dia</button>
-       <button class="agendamentoProx" id="agendamentoProx" onclick="redirectTo('./agnd_pendentes/agnd.html')">Próximos agendamentos</button>
-    </div>
+        <button class="agendamentoDia" id="agendamentoDia" onclick="redirectTo('../index.html')">Agendamento do dia</button>
+        <button class="agendamentoProx" id="agendamentoProx" onclick="redirectTo('#')">Próximos agendamentos</button>
+     </div>
+ 
 
     <div id="container">
         <div class="titulo-agendamento">
-            <h1 class="txt-agendamento" >Agendamentos</h1>
+            <h1 class="txt-agendamento" >Horários Pendentes</h1>
         </div>
-        
-        <div class="dia-data">
-            <h1 class="mostrarDia" id="mostrarDia"></h1>
-            <h1 class="mostrarData" id="mostrarData"></h1>
-        </div>
-       
+       <br>
         <div class="tabela-horario" id="tabela-horario">
             <div class="tabela-info">
                 <table id="agendamentos-tabela" class="agendamentos-tabela">
@@ -73,12 +71,12 @@
                             <th class="tabela-nome">Nome</th>
                             <th class="tabela-telefone">Telefone</th>
                             <th class="tabela-hora" id="tabela-hora">Hora</th>
+                            <th class="tabela-hora" id="tabela-hora">Data</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
             </div>
-            
 
             <div class="col-nome">
                 <div class="col-nomes1">
@@ -92,36 +90,21 @@
                 <div class="col-nomes3">
                     <p class="col-nome3" id="col-nome3"></p>
                 </div>
+
+                <div class="col-nomes4">
+                    <p class="col-nome4" id="col-nome4"></p>
+                </div>
             </div>
+
 
             <div class="dados">
                 <p id="dados_clientes" class="dados_clientes"></p>
             </div>
         </div>
-
-        <div class="btn-agendar" id="btn-agendar">
-            <i class="bi bi-plus-square-fill" id="icone"></i>
-        </div>
-
-        <div class="btn-dialog" class="btn-dialog" id="permissao_remover">
-            <i id="open-dialog" class="bi bi-trash"></i>
-            <dialog class="modal-card">
-                <h2 class="modal-title">Digite o nome que deseja remover</h2>
-                <form id="delete-user">
-                <div class="modal-info">
-                    <input type="text" id="remover-cliente" class="remover-cliente">
-                    <button onclick="window.location.reload()" type="submit" class="btn-remover">Remover</button>
-                    <div id="responseMessage"></div>  
-                </div>
-                </form>
-                <button id="remover" class="remover">X</button>
-            </dialog>
-
-        </div>
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="angd.js"></script>
 </body>
 
 </html>

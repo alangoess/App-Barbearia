@@ -75,23 +75,8 @@ BtnAgendar.addEventListener('click', ()=>{
 
 imgHeader.addEventListener('click', ()=>{
     location.href = '../page1.html'
-})
+});
 
-function agendamentoDia(){
-    if(btn2){
-        tabelaHorario.style.visibility = 'visible'
-        mostrarData.style.visibility = 'visible'
-        mostrarDia.style.visibility = 'visible'
-    } 
-}
-
-function agendamentoProx(){
-    if(btn1){
-        tabelaHorario.style.visibility = 'hidden';
-        mostrarData.style.visibility = 'hidden'
-        mostrarDia.style.visibility = 'hidden'
-    }
-}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -102,14 +87,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const MostrarDados1 = document.getElementById('col-nome1');
             const MostrarDados2 = document.getElementById('col-nome2');
             const MostrarDados3 = document.getElementById('col-nome3');
-            console.log(MostrarDados1);
+
+            MostrarDados1.style.fontSize = '18px';
+            MostrarDados2.style.fontSize = '18px';
+            MostrarDados3.style.fontSize = '18px';
+          
+            
             
 
             // Adicionar novos dados
             data.forEach(dado => {
                 MostrarDados1.innerHTML += `<p>${dado.nome}</p>`;
                 MostrarDados2.innerHTML += `<p>${dado.telefone}</p>`;
-                MostrarDados3.innerHTML += `<p>${dado.hora} 🕗</p>`;
+                MostrarDados3.innerHTML += `<p>${dado.hora} </p>`;
             });
         })
         .catch(error => {
