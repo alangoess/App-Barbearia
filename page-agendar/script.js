@@ -87,19 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const MostrarDados1 = document.getElementById('col-nome1');
             const MostrarDados2 = document.getElementById('col-nome2');
             const MostrarDados3 = document.getElementById('col-nome3');
+            // const MostrarDados4 = document.getElementById('col-nome4');
 
             MostrarDados1.style.fontSize = '18px';
             MostrarDados2.style.fontSize = '18px';
             MostrarDados3.style.fontSize = '18px';
-          
-            
-            
 
-            // Adicionar novos dados
-            data.forEach(dado => {
+            const mostrarDataValue = mostrarData.textContent; 
+
+            const agendamentosDoDia = data.filter(dado => dado.data === mostrarDataValue); 
+        
+        
+            agendamentosDoDia.forEach(dado => {
                 MostrarDados1.innerHTML += `<p>${dado.nome}</p>`;
                 MostrarDados2.innerHTML += `<p>${dado.telefone}</p>`;
-                MostrarDados3.innerHTML += `<p>${dado.hora} </p>`;
+                MostrarDados3.innerHTML += `<p>${dado.hora}</p>`;
             });
         })
         .catch(error => {

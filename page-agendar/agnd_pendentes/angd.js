@@ -2,6 +2,7 @@ function redirectTo(url) {
     window.location.href = url;
 }
 
+
 /*Menu*/
 let btnMenu = document.getElementById('btn-menu');
 let menu = document.getElementById('menu-mobile');
@@ -23,12 +24,32 @@ overlay.addEventListener('click', ()=>{
 
 
 let imgHeader = document.getElementById('img-header');
-let BtnAgendar = document.getElementById('icone')
-let button = document.querySelector('#open-dialog')
-let modal = document.querySelector('dialog')
-let buttonClose = document.querySelector("#remover")
-let greenStatus = document.getElementById('tabela-hora')
+let BtnAgendar = document.getElementById('icone');
+let button = document.querySelector('#open-dialog');
+let modal = document.querySelector('dialog');
+let buttonClose = document.querySelector("#remover");
+let greenStatus = document.getElementById('tabela-hora');
 const emoji = document.createElement('span');
+let mostrarDia = document.getElementById('mostrarDia');
+let mostrarData = document.getElementById('mostrarData');
+
+imgHeader.addEventListener('click', ()=>{
+    location.href = '../../page1.html'
+});
+
+
+
+dayName = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+const data = new Date;
+let hora = data.getHours();
+
+if(hora >=21){
+    mostrarDia.innerHTML = `${dayName[data.getDay() + 1]}`
+    mostrarData.innerHTML = `${data.getDate() + 1}/${data.getMonth() + 1}/${data.getFullYear()}`
+}else{
+     mostrarDia.innerHTML = `${dayName[data.getDay()]}`
+     mostrarData.innerHTML = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
+};
 
 
 
@@ -39,12 +60,8 @@ if(permissao === 'false'){
   console.log('ENTROU')
 } else {
     console.log('NÃO ENTROU')
-}
+};
 
-
-imgHeader.addEventListener('click', ()=>{
-    location.href = '../page1.html'
-})
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -62,8 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
             MostrarDados3.style.fontSize = '15px'
             MostrarDados4.style.fontSize = '15px'
 
+            const mostrarDataValue = mostrarData.textContent; 
+
+            const removerDataPassada = data.filter(dado => dado.data >= mostrarDataValue); 
+        
+
             // Adicionar novos dados
-            data.forEach(dado => {
+            removerDataPassada.forEach(dado => {
                 MostrarDados1.innerHTML += `<p>${dado.nome}</p>`;
                 MostrarDados2.innerHTML += `<p>${dado.telefone}</p>`;
                 MostrarDados3.innerHTML += `<p>${dado.hora}</p>`;
