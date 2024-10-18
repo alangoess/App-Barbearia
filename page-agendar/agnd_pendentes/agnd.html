@@ -12,7 +12,7 @@
         rel="stylesheet">
     <!---GOOGLE FONTS-->
     <title>Document</title>
-    <link rel="stylesheet" href="angd.css">
+    <link rel="stylesheet" href="agnd.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -105,10 +105,26 @@
                 <p id="dados_clientes" class="dados_clientes"></p>
             </div>
         </div>
+
+        <div class="btn-dialog" class="btn-dialog" id="permissao_remover">
+            <i id="open-dialog" class="bi bi-trash"></i>
+            <dialog class="modal-card">
+                <h2 class="modal-title">Digite o nome que deseja remover</h2>
+                <form id="delete-user">
+                <div class="modal-info">
+                    <input type="text" id="remover-cliente" class="remover-cliente">
+                    <button onclick="window.location.reload()" type="submit" class="btn-remover">Remover</button>
+                    <div id="responseMessage"></div>  
+                </div>
+                </form>
+                <button id="remover" class="remover">X</button>
+            </dialog>
+
+        </div>
     </div>
 
 
-    <script src="angd.js"></script>
+    <script src="agnd.js"></script>
 </body>
 
 </html>

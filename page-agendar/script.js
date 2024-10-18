@@ -1,6 +1,6 @@
 function redirectTo(url) {
     window.location.href = url;
-}
+};
 
 /*Menu*/
 let btnMenu = document.getElementById('btn-menu');

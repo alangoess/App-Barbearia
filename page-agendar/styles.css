@@ -14,7 +14,12 @@ body {
 
 .subHeader{
     display: flex;
-    justify-content: center
+    justify-content: center;
+}
+
+.subHeader button {
+    z-index: 1;
+    pointer-events: auto;
 }
 
 .agendamentoDia{
